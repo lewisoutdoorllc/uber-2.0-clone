@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "uber-2.0-clone",
-    "slug": "uber-2.0-clone",
+    "slug": "uber-2_0-clone",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -13,9 +13,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },

@@ -1,13 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
+// import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { Provider } from 'react-redux';
+import { store } from './store';
+
+// set up redux
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    // need to wrap the app in the provider for react-redux to work
+    // also need to wrap the app in the store for redux to work
+    <Provider store={store}>
+      <View style={styles.container}>
+        <Text>Lets Build Uber 2.0!</Text>
+        {/* <StatusBar style="auto" /> */}
+      </View>
+    </Provider>
+
   );
 }
 
