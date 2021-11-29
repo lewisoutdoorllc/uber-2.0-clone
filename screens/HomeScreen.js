@@ -4,10 +4,12 @@ import tw from 'tailwind-react-native-classnames'
 import NavOptions from '../componets/NavOptions'
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import { API_KEY } from "@env"
+import { useDispatch } from 'react-redux';
+import { selectDestination, setOrigin } from '../slices/navSlice';
 
 const HomeScreen = () => {
 
-    
+    const dispatch = useDispatch()
 
     return (
         <SafeAreaView style={tw`bg-white h-full`}>
@@ -22,7 +24,7 @@ const HomeScreen = () => {
                         { uri: 'https://links.papareact.com/gzs', }
                     }
                 />
-                <GooglePlacesAutocomplete 
+                <GooglePlacesAutocomplete
                     styles={{
                         container: {
                             flex: 0,
@@ -32,7 +34,12 @@ const HomeScreen = () => {
                         },
                     }}
                     onPress={(data, details = null) => {
-                        console.log(data, details)
+                        dispatch(setOrigin({
+                            location: details.geometry.location,
+                            desription: data.description, // data.description is the text that is displayed in the autocomplete or the seach bar
+                        }))
+
+                        dispatch(selectDestination(null))
                     }}
                     query={{
                         // google places API autocomplete search query
