@@ -23,7 +23,7 @@ const NavigateCard = () => {
                         onPress={(data, details = null) => {
                             dispatch(setDestination({
                                 location: details.geometry.location,
-                                desription: data.description, // data.description is the text that is displayed in the autocomplete or the seach bar
+                                description: data.description, // data.description is the text that is displayed in the autocomplete or the seach bar
                             }))
 
                             navigation.navigate('RideOptionsCard')
