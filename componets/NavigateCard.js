@@ -5,7 +5,7 @@ import tw from 'tailwind-react-native-classnames'
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import { API_KEY } from "@env"
 import { useDispatch } from 'react-redux';
-import { setDetination } from '../slices/navSlice';
+import { setDestination } from '../slices/navSlice';
 import { useNavigation } from '@react-navigation/core';
 
 const NavigateCard = () => {
@@ -21,7 +21,7 @@ const NavigateCard = () => {
                     <GooglePlacesAutocomplete
                         styles={autoCompleteStyles}
                         onPress={(data, details = null) => {
-                            dispatch(setDetination({
+                            dispatch(setDestination({
                                 location: details.geometry.location,
                                 desription: data.description, // data.description is the text that is displayed in the autocomplete or the seach bar
                             }))

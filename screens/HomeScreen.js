@@ -3,7 +3,7 @@ import { SafeAreaView, StyleSheet, Text, View, Image } from 'react-native'
 import tw from 'tailwind-react-native-classnames'
 import NavOptions from '../componets/NavOptions'
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
-import { API_KEY } from "@env"
+import { API_KEY } from '@env'
 import { useDispatch } from 'react-redux';
 import { selectDestination, setOrigin } from '../slices/navSlice';
 
