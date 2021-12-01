@@ -36,7 +36,7 @@ const HomeScreen = () => {
                     onPress={(data, details = null) => {
                         dispatch(setOrigin({
                             location: details.geometry.location,
-                            desription: data.description, // data.description is the text that is displayed in the autocomplete or the seach bar
+                            description: data.description, // data.description is the text that is displayed in the autocomplete or the seach bar
                         }))
 
                         dispatch(selectDestination(null))
@@ -52,7 +52,7 @@ const HomeScreen = () => {
                     enablePoweredByContainer={false} // enablePoweredByContainer gets rid of the branding at the bottom of the screen.
                     fetchDetails={true} // fetchDetails enables the fetching of details for each search result
                     minLength={2}  // minimum length of text to search
-                    returnKeyType='search' // when return is pressed, search is then executed
+                    returnKeyType={'search'} // when return is pressed, search is then executed
                 />
 
                 <NavOptions />

@@ -3,7 +3,7 @@ import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
 // import { SafeAreaView } from 'react-native-safe-area-context'
 import tw from 'tailwind-react-native-classnames'
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
-import { API_KEY } from "@env"
+import { API_KEY } from '@env'
 import { useDispatch } from 'react-redux';
 import { setDestination } from '../slices/navSlice';
 import { useNavigation } from '@react-navigation/core';
@@ -41,7 +41,7 @@ const NavigateCard = () => {
                         enablePoweredByContainer={false} // enablePoweredByContainer gets rid of the branding at the bottom of the screen.
                         fetchDetails={true} // fetchDetails enables the fetching of details for each search result
                         minLength={2}  // minimum length of text to search
-                        returnKeyType='search' // when return is pressed, search is then executed
+                        returnKeyType={'search'} // when return is pressed, search is then executed
                     />
                 </View>
             </View>
