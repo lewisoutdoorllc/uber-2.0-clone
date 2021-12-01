@@ -14,11 +14,11 @@ const MapScreen = () => {
 
     return (
         <SafeAreaView>
-            <View style={tw`h-1/4`}>
+            <View style={tw`h-1/2`}>
                 <Map />
             </View>
 
-            <View style={tw`h-3/4`}>
+            <View style={tw`h-1/2`}>
                 <Stack.Navigator>
                     <Stack.Screen
                         name='NavigateCard'

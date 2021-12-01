@@ -6,6 +6,7 @@ import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplet
 import { API_KEY } from '@env'
 import { useDispatch } from 'react-redux';
 import { selectDestination, setOrigin } from '../slices/navSlice';
+import NavFavorite from '../componets/NavFavorite';
 
 const HomeScreen = () => {
 
@@ -56,6 +57,7 @@ const HomeScreen = () => {
                 />
 
                 <NavOptions />
+                <NavFavorite />
             </View>
         </SafeAreaView>
     )

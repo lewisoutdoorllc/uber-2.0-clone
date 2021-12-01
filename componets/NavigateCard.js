@@ -7,6 +7,7 @@ import { API_KEY } from '@env'
 import { useDispatch } from 'react-redux';
 import { setDestination } from '../slices/navSlice';
 import { useNavigation } from '@react-navigation/core';
+import NavFavorite from './NavFavorite';
 
 const NavigateCard = () => {
 
@@ -44,6 +45,9 @@ const NavigateCard = () => {
                         returnKeyType={'search'} // when return is pressed, search is then executed
                     />
                 </View>
+
+                <NavFavorite />
+
             </View>
         </SafeAreaView>
     )
