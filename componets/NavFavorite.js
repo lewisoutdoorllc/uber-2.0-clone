@@ -8,13 +8,13 @@ const data = [
         id: 1,
         icon: 'home',
         location: 'Home',
-        destination: 'Code Street, London, UK',
+        destination: 'Aloma Ave, Oviedo, FL',
     },
     {
         id: 2,
         icon: 'briefcase',
         location: 'Work',
-        destination: 'London Eye, London, UK',
+        destination: 'Alafaya Trl, Oviedo, FL',
     },
 ];
 

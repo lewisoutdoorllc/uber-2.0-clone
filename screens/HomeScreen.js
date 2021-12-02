@@ -17,12 +17,15 @@ const HomeScreen = () => {
             <View style={tw`p-5`}>
                 <Image
                     style={{
-                        width: 100,
-                        height: 100,
+                        width: 130,
+                        height: 130,
+                        marginTop: -30,
+                        marginLeft: -15,
+                        marginBottom: -15,
                         resizeMode: 'contain',
                     }}
                     source={
-                        { uri: 'https://links.papareact.com/gzs', }
+                        { uri: 'https://i.ibb.co/84stgjq/uber-technologies-new-20218114.jpg', }
                     }
                 />
                 <GooglePlacesAutocomplete
@@ -32,6 +35,8 @@ const HomeScreen = () => {
                         },
                         textInput: {
                             fontSize: 15,
+                            backgroundColor: 'rgba(200, 200, 200, 0.4)',
+                            borderRadius: 15,
                         },
                     }}
                     onPress={(data, details = null) => {
